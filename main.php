@@ -5,11 +5,12 @@
 		$host = explode('.',$_SERVER['HTTP_HOST']);
 		array_shift($host);
 		$apiUrl = 'api.'.implode('.',$host);
-		if (strpos($apiUrl, 'outgrow') !== false) {
+		/*if (strpos($apiUrl, 'outgrow') !== false) {
 			$url = $_SERVER['REQUEST_SCHEME'].'://'.$apiUrl.'/api/v1/builder/get_calc'.$_SERVER['REQUEST_URI'];
 		} else {
 			$url ='https://api.outgrow.co/api/v1/builder/get_calc'.$_SERVER['REQUEST_URI'];
-		}
+		}*/
+        $url ='https://api.outgrow.co/api/v1/builder/get_calc'.$_SERVER['REQUEST_URI'];
 	    $curl = curl_init();
 	    curl_setopt_array($curl, array(
 	        CURLOPT_RETURNTRANSFER => 1,
@@ -26,7 +27,7 @@
 	    	// This is the URL you want to shorten
 	    	unset($curl);
 			$name = explode("?", $_SERVER['REQUEST_URI']);
-			$longUrl = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/seo'.$name[0];
+			$longUrl = $_SERVER['REQUEST_SCHEME'].'://live.outgrow.co/seo'.$name[0];
 			$apiKey = 'AIzaSyAyEiPl1ZWGqIjhCb4hPz34HgwLS_G9zZk';
 			$postData = array('longUrl' => $longUrl, 'key' => $apiKey);
 			$jsonData = json_encode($postData);
