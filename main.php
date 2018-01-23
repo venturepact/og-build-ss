@@ -15,7 +15,8 @@
 	        CURLOPT_RETURNTRANSFER => 1,
 	        CURLOPT_URL => $url,
 	        CURLOPT_USERAGENT => 'Codular Sample cURL Request',
-	        CURLOPT_SSL_VERIFYPEER=>false,
+			CURLOPT_SSL_VERIFYPEER=>false,
+			CURLOPT_HTTPHEADER=>array('Origin: https://app.outgrow.co'),
 	    ));
 	    $resp = curl_exec($curl);
 	    //close connection
@@ -49,7 +50,8 @@
 	  	    $imageLink = $response['data']['seoImage'];
 	    }else{
           $delayFactor = mt_rand(2500,5000);
-          $imageLink = "http://process.filestackapi.com/A3ygIw4hISSCdApqW4SAwz/urlscreenshot=delay:{$delayFactor}/".$shortUrl;
+		  //$imageLink = "http://process.filestackapi.com/A3ygIw4hISSCdApqW4SAwz/urlscreenshot=delay:{$delayFactor}/".$shortUrl;
+		  $imageLink = "http://api.screenshotlayer.com/api/capture?access_key=8df67e5f400883f215f8e8d7a7588bf4&url=" .$shortUrl. "&viewport=1200x630&fullpage=1&delay=3";
 	    }
 
 	?>
@@ -73,11 +75,11 @@
 		<meta name="description" content="Easily create interactive experiences that increase conversion and bring traffic.">
 		<meta property="og:title" content="Interactive Calculators & Quizzes from Outgrow" />
 		<meta property="og:description" content="Easily create interactive experiences that increase conversion and bring traffic." />
-		<meta property="og:image" content="https://cdn.filestackcontent.com/sPhaDxuBSFKRZiXXLWzm"/>
+		<meta property="og:image" content="https://cdn.filestackcontent.com/1lm3eyhnQ8Kfh2li09Kq"/>
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:title" content="Interactive Calculators & Quizzes from Outgrow">
 		<meta name="twitter:description" content="Easily create interactive experiences that increase conversion and bring traffic.">
-		<meta name="twitter:image" content="https://cdn.filestackcontent.com/sPhaDxuBSFKRZiXXLWzm">
+		<meta name="twitter:image" content="https://cdn.filestackcontent.com/1lm3eyhnQ8Kfh2li09Kq">
 	<?php
 	    }
 	?>
