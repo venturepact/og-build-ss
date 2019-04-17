@@ -988,14 +988,16 @@
         background: #bec5c9
     }
     .membership-details-sec .table-responsive .table>thead>tr>th {
-        line-height: 24px;
+        line-height: 1.4;
         border-bottom: none;
         color: #fff;
-        font-size: 12px;
+        font-size: 11px;
         border-top: none;
-        font-family: montserratregular;
-        padding: 8px 30px;
-        vertical-align: middle
+        font-family: montserratbold;
+        padding: 14px 30px;
+        vertical-align: middle;
+        text-transform: uppercase; 
+        letter-spacing: 0.5px;
     }
     .membership-details-sec .table>thead:first-child>tr:first-child>th {
         font-weight: 100
@@ -1068,20 +1070,22 @@
         background: #bec5c9
     }
     .payment-method .table-responsive .table>thead>tr>th {
-        line-height: 24px;
+        line-height: 1.4;
         border-bottom: none;
         color: #fff;
-        font-size: 12px;
+        font-size: 11px;
         border-top: none;
-        font-family: montserratregular;
-        padding: 8px 30px
+        font-family: montserratbold;
+        padding: 14px 30px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
-    .payment-method .table>thead:first-child>tr:first-child>th {
+    /* .payment-method .table>thead:first-child>tr:first-child>th {
         color: #fff;
         font-weight: 100;
         font-size: 12px;
         font-family: montserratregular
-    }
+    } */
     .payment-method .table-responsive .table tbody {
         background: #fff
     }
@@ -2151,11 +2155,11 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, .2);
         padding: 20px 20px 25px;
         margin: 15px 0;
-        min-height: 207px;
+        min-height: 249px;
         text-align: center;
         font-family: montserratregular;
         position: relative;
-        color: #62696d
+        color: #62696d; 
     }
     .active-users-card .active-users-box .img-block-blue {
         background: #269fd8;
@@ -2290,7 +2294,7 @@
     }
     .active-users-dropdown-wrapper .dropdown-menu {
         padding: 10px 0;
-        z-index: 1;
+        z-index: 9999;
         top: 13px;
         left: -70px;
         min-width: 148px;
@@ -3833,6 +3837,10 @@
         .tabs-wrapper #my-account .nav-tabs.nav-justified>li:nth-child(3)>a {
             padding: 18px 12px
         }
+        .tabs-wrapper #my-account .nav-tabs.nav-justified>li:nth-child(3)>a span {
+            display: block;
+        }
+        .tabs-wrapper #my-account .nav-tabs.nav-justified>li:nth-child(3)>a div{ display: none;}
         #companies .companies-card {
             padding: 0
         }
@@ -4349,9 +4357,9 @@
     .payment-history .table>tfoot>tr>th,
     .payment-history .table>thead>tr>td,
     .payment-history .table>thead>tr>th {
-        padding: 20px 15px;
+        padding: 18px;
         color: #62696d;
-        font-size: 14px;
+        font-size: 13px;
         border-top: none;
         font-family: montserratregular
     }
@@ -4380,15 +4388,17 @@
         border-top: none
     }
     .payment-history .table>thead:first-child>tr:first-child>th {
-        line-height: 24px;
+        line-height: 1.4;
         border-bottom: none;
         color: #fff;
-        font-size: 12px;
+        font-size: 11px;
         border-top: none;
-        font-family: montserratregular;
-        padding: 8px 15px;
-        font-weight: 100;
-        vertical-align: middle
+        font-family: montserratbold;
+        padding: 14px 15px;
+        /* font-weight: 100; */
+        vertical-align: middle;
+        text-transform: uppercase; 
+        letter-spacing: 0.5px;
     }
     .payment-history .payment-history-header i.material-icons {
         color: #fff!important
@@ -4400,13 +4410,14 @@
         color: rgba(98, 105, 109, .8)!important
     }
     td a.pdf-download {
-        font-size: 10px;
-        color: #f6f8f9;
-        background: #8a8e91;
-        font-family: montserratbold;
+        font-size: 11px;
+        color: #888888;
+        /* background: #8a8e91; */
+        font-family: montserratregular;
         padding: 2px 7px;
         border-radius: 20px
     }
+    td a.pdf-download i{ margin-right: 4px;}
     .payment-history tbody tr {
         padding: 8px 30px;
         line-height: 40px
@@ -4656,7 +4667,7 @@
     .cc-modal .credit-sec {
         margin-top: 25px
     }
-    .cc-modal input.cc-number {
+    /* .cc-modal input.cc-number {
         background: #fff;
         border: none;
         border-radius: 3px;
@@ -4668,7 +4679,7 @@
         text-align: center;
         color: #fb5f66!important;
         margin-right: 10px
-    }
+    } */
     .cc-modal input.cc-number.cc-number-last {
         margin-right: 0!important
     }
@@ -4778,7 +4789,7 @@
         position: relative;
         top: 3px
     }
-    .cc-modal.modal .btn-red-outline {
+    /* .cc-modal.modal .btn-red-outline {
         color: #fb5f66;
         background-color: #fff;
         border-color: #fb5f66;
@@ -4793,7 +4804,7 @@
         bottom: -70px;
         right: 0;
         opacity: 1
-    }
+    } */
     .cc-modal.modal input.cc-exp:focus,
     .cc-modal.modal input.cc-name:focus,
     .cc-modal.modal input.cc-number:focus,
